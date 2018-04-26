@@ -1,0 +1,6 @@
+{
+    "require": {
+        "charlottedunois/yasmin": "^0.4.0",
+        "mpyw/co": "^1.5"
+    }
+}
