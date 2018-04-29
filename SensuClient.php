@@ -3,7 +3,7 @@
  * @file SensuClient.php
  * @author Sensu Development Team
  * @date 2018/03/30
- * @brief SensuプラットフォームAPIクライアント
+ * @brief Sensu プラットフォームAPI クライアント
  */
 
 namespace SensuDevelopmentTeam;
@@ -11,7 +11,7 @@ namespace SensuDevelopmentTeam;
 class SensuClient
 {
     /*!
-     * @brief SensuプラットフォームAPI基底URL
+     * @brief Sensu プラットフォームAPI 基底URL
      */
     const API_BASE_URL = 'https://sensu.tips/api/platform';
 
@@ -27,6 +27,7 @@ class SensuClient
 
     /*!
      * @brief コンストラクタ
+     * @param $api_key APIキー
      */
     public function __construct($api_key)
     {
@@ -44,6 +45,9 @@ class SensuClient
 
     /*!
      * @brief コマンド
+     * @param $social_account ソーシャルアカウント識別
+     * @param $command 命令
+     * @return コマンドの返答
      */
     public function command($social_account, $command)
     {
