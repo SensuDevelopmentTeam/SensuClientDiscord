@@ -59,7 +59,7 @@ class SensuClientDiscord
             $command = $self::getCommandFromText($command);
 
             // 投げ銭コマンド
-            if (isset($command[0]) && $command[0] === 'tip')
+            if (isset($command[0]) && strcasecmp($command[0], 'tip') == 0)
             {
                 if (isset($command[3]))
                 {
@@ -88,7 +88,7 @@ class SensuClientDiscord
             if (isset($result->push_message))
             {
                 // 投げ銭コマンド
-                if (isset($command[0]) && $command[0] === 'tip')
+                if (isset($command[0]) && strcasecmp($command[0], 'tip') == 0)
                 {
                     $self->discord->fetchUser($command[3])->then(function($user) use ($message, $result)
                     {
