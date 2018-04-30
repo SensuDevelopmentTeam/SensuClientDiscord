@@ -13,7 +13,7 @@ class SensuClient
     /*!
      * @brief Sensu プラットフォームAPI 基底URL
      */
-    const API_BASE_URL = 'https://sensu.tips/api/platform';
+    const API_BASE_URL = 'https://sensu.tips/api/v1/platform';
 
     /*!
      * @brief APIキー
